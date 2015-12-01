@@ -1,0 +1,9 @@
+{
+    "require": {
+        "silex/silex": "~1.2",
+        "symfony/twig-bridge": "~2.3",
+        "monolog/monolog": "^1.17",
+        "symfony/yaml": "^2.4",
+        "deralex/yaml-config-service-provider": "1.0.x-dev"
+    }
+}
