@@ -1,0 +1,29 @@
+team:
+  user1:
+    name: ~
+    slices: [0, 0, 0, 0, 0]
+    pizzas: 0
+  user2:
+    name: ~
+    slices: [0, 0, 0, 0, 0]
+    pizzas: 0
+  user3:
+    name: ~
+    slices: [0, 0, 0, 0, 0]
+    pizzas: 0
+  user4:
+    name: ~
+    slices: [0, 0, 0, 0, 0]
+    pizzas: 0
+  user5:
+    name: ~
+    slices: [0, 0, 0, 0, 0]
+    pizzas: 0
+  user6:
+    name: ~
+    slices: [0, 0, 0, 0, 0]
+    pizzas: 0
+  user7:
+    name: ~
+    slices: [0, 0, 0, 0, 0]
+    pizzas: 0
