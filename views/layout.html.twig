@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title "Welcome on my site!" %}</title>
+        {% block stylesheets %}
+          <link rel="stylesheet" type="text/css" hrf="css/jquery.jqplot.min.css" />
+        {% endblock %}
+    </head>
+    <body>
+        {% block content "" %}
+        {% block javascripts %}
+          <script type="text/javascript" src="js/jquery.min.js"></script>
+          <script type="text/javascript" src="js/jquery.jqplot.min.js"></script>
+          <script type="text/javascript" src="js/jqplot.pieRenderer.min.js"></script>
+          <script type="text/javascript" src="js/jqplot.donutRenderer.min.js"></script>
+          <script type="text/javascript">
+             $(document).ready(function(){
+               var data = [['1', 1],['2', 1], ['3', 1], ['4', 1],['5', 1]];
+               var plot1 = jQuery.jqplot ('chart1', [data], {seriesDefaults: {renderer: jQuery.jqplot.PieRenderer}});
+
+               var data = [['1', 1],['2', 1], ['3', 1], ['4', 1],['5', 1]];
+               var plot2 = jQuery.jqplot ('chart2', [data], {seriesDefaults: {renderer: jQuery.jqplot.PieRenderer}});
+
+               var data = [['1', 1],['2', 1], ['3', 1], ['4', 1],['5', 1]];
+               var plot3 = jQuery.jqplot ('chart3', [data], {seriesDefaults: {renderer: jQuery.jqplot.PieRenderer}});
+
+               var data = [['1', 1],['2', 1], ['3', 1], ['4', 1],['5', 1]];
+               var plot4 = jQuery.jqplot ('chart4', [data], {seriesDefaults: {renderer: jQuery.jqplot.PieRenderer}});
+
+               var data = [['1', 1],['2', 1], ['3', 1], ['4', 1],['5', 1]];
+               var plot5 = jQuery.jqplot ('chart5', [data], {seriesDefaults: {renderer: jQuery.jqplot.PieRenderer}});
+
+               var data = [['1', 1],['2', 1], ['3', 1], ['4', 1],['5', 1]];
+               var plot6 = jQuery.jqplot ('chart6', [data], {seriesDefaults: {renderer: jQuery.jqplot.PieRenderer}});
+
+               var data = [['1', 1],['2', 1], ['3', 1], ['4', 1],['5', 1]];
+               var plot7 = jQuery.jqplot ('chart7', [data], {seriesDefaults: {renderer: jQuery.jqplot.PieRenderer}});
+             });
+           </script>
+        {% endblock %}
+    </body>
+</html>
