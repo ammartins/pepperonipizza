@@ -1,0 +1,65 @@
+{% extends "layout.html.twig" %}
+
+{% block title "Hello world!" %}
+
+{% block content %}
+  <h1 id='title'>Is it my turn to bring Pepperoni Pizza</h1>
+  <div id="main_div">
+    {% set counter = 1 %}
+    {% for user in users %}
+      <div class="pizza_box">
+        <h5>{{ user.name  }} {% if user.pizzas > 0 %}<span style="color: red">- Record: {{ user.pizzas }}</span>{% endif %}</h5>
+        <input type="hidden" data-slices="{{ user.slices }}" />
+        <div class="pizza_graph" id="chart{{counter}}">
+        </div>
+      </div>
+      {% set counter = counter + 1 %}
+    {% endfor %}
+  </div>
+{% endblock %}
+
+{% block stylesheets %}
+  <style>
+    #main_div {
+      width: 1200px;
+      margin: 0 auto;
+      background-color: white;
+      pading: 10px
+    }
+    body {
+      background-color: rgba(38,50,76,0.95);
+    }
+    .pizza_graph {
+    }
+    .pizza_box {
+      float: left;
+      height: 310px;
+      width: 200px;
+      background-color: white;
+      border: 2px solid green;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+    h5 {
+      font-size: 20px;
+      color: white;
+      text-align: center;
+      background-color: rgba(38,50,76,0.95);
+      paddin:0;
+      margin:0
+    }
+    #title {
+      height: 100px;
+      background: transparent url('views/logo.jpg') top left no-repeat;
+      padding: 110px 0 0 280px;
+    }
+    h1 {
+      font-family: "Gill Sans Light",Verdana,sans-serif;
+      font-size: 50px;
+      line-height: 55px;
+      font-weight: normal;
+      color: white;
+      text-shadow: 2px 1px #003366;
+    }
+  </style>
+{% endblock %}
